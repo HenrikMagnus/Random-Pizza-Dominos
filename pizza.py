@@ -8,7 +8,7 @@ toppings = ['Ananas', 'Bacon', 'Basilikum-Pesto','Blattspinat','Brokkoli','Burge
             'Cherrytomaten','Chillisalami','Curry-Sauce', 'Dänische Remoulade', 'Frühlingszwiebeln','Gurke (dänisch)',
             'Gyros','Hirtenkäse','Hähnchenbrust','Italienischer Hartkäse','Jalapeneos','Knoblauch in Öl','Käse (Mozzarella)',
             'Mais','Mozzarella Kugeln','Oliven (grün)','Paprika','Pfifferlinge','Pizza Chillis','Prosciutto Cotto',
-            'Pulled Beef', 'Rinderhack', 'Rindersteakstreifen', 'Röstzwiebeln', 'Salami', 'Sesam', 'Spargek (grün)',
+            'Pulled Beef', 'Rinderhack', 'Rindersteakstreifen', 'Röstzwiebeln', 'Salami', 'Sesam', 'Spargel (grün)',
             'Steakpfeffer', 'Sucuk', 'Teriyaki Sauce', 'Thunfisch', 'Tomaten', 'Tomaten-Ketchup', 'Tsatsiki',
             'Vegane Filetstreifen', 'Vegane Sauce', 'Veganer Reibeschmelz', 'Würstchen', 'Zwiebeln (rot)']
 
