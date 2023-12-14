@@ -32,7 +32,7 @@ def generate_random_pizza():
 
 def main():
     print("Willkommen beim Pizzagenerator")
-    num_pizzas = int(input("Wie viele Pizzen sollen erzeugt werden? "))
+    num_pizzas = int(input("Wie viele Pizzen sollen erzeugt werden? ").strip())
 
     for i in range(num_pizzas):
         pizza = generate_random_pizza()
