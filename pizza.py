@@ -1,8 +1,8 @@
 import random
 
 # Lists of options for different pizza components
-sizes = ['25 cm', '28 cm', '32 cm']
-crusts = ['Classic', 'Cheese']
+größen = ['25 cm', '28 cm', '32 cm']
+krusten = ['Klassik', 'Käse']
 sauces = ['BBQ', 'Korean BBQ', 'Sauce Hollandaise', 'Tomatensoße', 'keine Soße']
 toppings = ['Ananas', 'Bacon', 'Basilikum-Pesto','Blattspinat','Brokkoli','Burger-Sauce','Champignons',
             'Cherrytomaten','Chillisalami','Curry-Sauce', 'Dänische Remoulade', 'Frühlingszwiebeln','Gurke (dänisch)',
@@ -12,10 +12,26 @@ toppings = ['Ananas', 'Bacon', 'Basilikum-Pesto','Blattspinat','Brokkoli','Burge
             'Steakpfeffer', 'Sucuk', 'Teriyaki Sauce', 'Thunfisch', 'Tomaten', 'Tomaten-Ketchup', 'Tsatsiki',
             'Vegane Filetstreifen', 'Vegane Sauce', 'Veganer Reibeschmelz', 'Würstchen', 'Zwiebeln (rot)']
 
+def main():
+    num_pizzas = eingabe()
+    pizza_schleife(num_pizzas)
 
-def generate_random_pizza():
-    size = random.choice(sizes)
-    crust = random.choice(crusts)
+def eingabe():
+    print("Willkommen beim Pizzagenerator")
+    return int(input("Wie viele Pizzen sollen erzeugt werden?").strip())
+
+def pizza_schleife(num_pizzas):
+    for i in range(num_pizzas):
+        pizza = zufalls_pizza()
+        print("\nPizza {}: ".format(i + 1))
+        print("Größe: {}".format(pizza['Größe']))
+        print("Kruste: {}".format(pizza['Kruste']))
+        print("Soße: {}".format(pizza['Sauce']))
+        print("Belag: {}".format(', '.join(pizza['Toppings'])))
+
+def zufalls_pizza():
+    größe = random.choice(größen)
+    kruste = random.choice(krusten)
     sauce = random.choice(sauces)
 
     # Choose a random number of toppings (between 1 and 4)
@@ -23,24 +39,12 @@ def generate_random_pizza():
     chosen_toppings = random.sample(toppings, num_toppings)
 
     return {
-        'Size': size,
-        'Crust': crust,
+        'Größe': größe,
+        'Kruste': kruste,
         'Sauce': sauce,
         'Toppings': chosen_toppings
     }
 
-
-def main():
-    print("Willkommen beim Pizzagenerator")
-    num_pizzas = int(input("Wie viele Pizzen sollen erzeugt werden? ").strip())
-
-    for i in range(num_pizzas):
-        pizza = generate_random_pizza()
-        print("\nPizza {}: ".format(i + 1))
-        print("Größe: {}".format(pizza['Size']))
-        print("Kruste: {}".format(pizza['Crust']))
-        print("Soße: {}".format(pizza['Sauce']))
-        print("Belag: {}".format(', '.join(pizza['Toppings'])))
 
 
 if __name__ == "__main__":
